@@ -127,7 +127,7 @@ spendingjpIcons.Views.Icon = Backbone.View.extend({
       icon.attr({ fill: 'white', stroke: 'none' });
       icon.scale(iconRad/50, iconRad/50, 0, 0);
     });
-    this.$el.append('<div><a href="https://raw.github.com/spendingjp-icons/spendingjp-icons.github.com/master/' + this.model.get('path') + '" download="' + this.model.get('filename') + '" target="_blank">' + this.model.get('basename') + '</a></div>');
+    this.$el.append('<div><a href="https://raw.github.com/jmblog/spendingjp-icons/master/app/' + this.model.get('path') + '" download="' + this.model.get('filename') + '" target="_blank">' + this.model.get('basename') + '</a></div>');
     return this;
   },
   toggle: function() {
