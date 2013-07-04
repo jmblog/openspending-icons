@@ -10,10 +10,12 @@
 
 ## インストール
 
-  $ git clone git@github.com:jmblog/spendingjp-icons.git
-	$ cd spendingjp-icons/
-	$ npm install
-	$ bower install
+```bash
+$ git clone git@github.com:jmblog/spendingjp-icons.git
+$ cd spendingjp-icons/
+$ npm install
+$ bower install
+```
 
 ## サイトの更新方法
 
@@ -31,6 +33,6 @@ SVGファイルを追加、変更する場合や、サイトを修正する場�
 
 https://github.com/yeoman/yeoman/wiki/Deployment も参照のこと。
 
-## リクエストは
+## ご意見・ご要望は
 
 「SVGファイルを追加したい」「こんな機能が欲しい」などリクエストのある方は、[issue](https://github.com/jmblog/spendingjp-icons/issues) でお願いします。もちろん Pull Request も大歓迎です。
