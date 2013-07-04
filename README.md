@@ -29,9 +29,11 @@ SVGファイルを追加、変更する場合や、サイトを修正する場�
 
 4. `master` ブランチにコミットする。
 
-5. `$ git subtree push --prefix dist origin gh-pages` を実行して本番サーバー（Github pages）にデプロイする。
+5. `$ git push orign master` でプッシュする。
 
-https://github.com/yeoman/yeoman/wiki/Deployment も参照のこと。
+6. `$ git subtree push --prefix dist origin gh-pages` を実行して本番サーバー（Github pages）にデプロイする。
+
+`git-subtree` を利用したデブロイ方法については https://github.com/yeoman/yeoman/wiki/Deployment を参照のこと。
 
 ## ご意見・ご要望は
 
