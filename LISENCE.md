@@ -1,0 +1,1 @@
+All [content](http://creativecommons.org/licenses/by/3.0/), [code](http://www.gnu.org/licenses/agpl.html) and [data](http://opendatacommons.org/licenses/odbl/) is openly licensed in accordance with the [open definition](http://opendefinition.org/).
