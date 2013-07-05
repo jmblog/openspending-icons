@@ -50,9 +50,8 @@ window.spendingjpIcons = {
         }
       });
       
-      // Prepare a flip-icon manager
-      $('#flip-icons').on('click', 'a', function(e) {
-        e.preventDefault();
+      // Prepare a toggle switch
+      $('#toggle-switch').on('change', function(e) {
         iconList.each(function(icon) {
           icon.set('active', !icon.get('active'));
         });

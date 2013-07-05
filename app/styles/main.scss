@@ -1,4 +1,5 @@
 @import "../bower_components/normalize.scss/_normalize";
+@import "toggle-switch";
 
 body {
   background: #fff;
@@ -47,7 +48,7 @@ header {
   }
   
   .container {
-    margin-top: 77px;
+    margin-top: 97px;
   }
 }
 
@@ -86,14 +87,24 @@ footer {
 
 .flip-icons {
   position: absolute;
-  top: 10px;
+  top: 3px;
   right: 72px;
   
   a {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
+.toggle {
+  width: 80px;
+}
+
+.candy .slide-button::after {
+  content: "||";
+  color: #fff;
+  font-weight: normal;
+  line-height: 30px;
+}
 .spinner {
   text-align: center;
   padding: 60px;
