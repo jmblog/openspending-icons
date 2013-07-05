@@ -51,7 +51,7 @@ window.spendingjpIcons = {
       });
       
       // Prepare a toggle switch
-      $('#toggle-switch').on('change', function(e) {
+      $('#toggle-switch').on('change', function() {
         iconList.each(function(icon) {
           icon.set('active', !icon.get('active'));
         });
