@@ -52,6 +52,7 @@ window.spendingjpIcons.Data.Icons = [
   'icons/extras/c_watersup.svg',
   'icons/extras/c_yougo.svg',
   'icons/extras/machi.svg',
+  'icons/extras/payroll.svg',
   'icons/extras/sangyou3.svg',
   'icons/extras/snow-removal.svg',
   'icons/extras/vote.svg',
