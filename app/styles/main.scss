@@ -99,16 +99,6 @@ footer {
   width: 80px;
 }
 
-.candy {
-  background-color: #555;
-}
-
-.candy .slide-button::after {
-  content: "||";
-  color: #fff;
-  font-weight: normal;
-  line-height: 30px;
-}
 .spinner {
   text-align: center;
   padding: 100px;
@@ -125,4 +115,18 @@ footer {
 
 .spectrum {
   display: none;
+}
+
+// Overwrite candy theme styles in toggle-switch.scss
+@media only screen {
+  .candy {
+    background-color: #555;
+  }
+  
+  .candy .slide-button::after {
+    content: "||";
+    color: #fff;
+    font-weight: normal;
+    line-height: 30px;
+  }
 }
