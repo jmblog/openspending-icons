@@ -3,7 +3,7 @@
 
 body {
   background: #fff;
-  font-family: "HelveticaNeueW01-75Bold", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 hr {
@@ -55,18 +55,40 @@ header {
 footer {
   padding: 10px 0 30px;
   background: #000;
-  color: #fff;
-  font-size: 13px;
+  color: #999;
+  font-size: 14px;
+  line-height: 1.7;
   
   a {
-    color: #AEEBDF;
+    color: #eee;
   }
 }
+
+$row-width: 943px;
+$gatter: 30px;
 
 .row {
   position: relative;
   margin: auto;
-  width: 943px;
+  width: $row-width;
+  @extend %clearfix;
+}
+
+[class*="span"] {
+  float: left;
+  margin-right: $gatter;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.span8 {
+  width: ($row-width * 8/12 - $gatter);
+}
+
+.span4 {
+  width: ($row-width * 4/12 - $gatter);
 }
 
 .smaller {
@@ -118,15 +140,27 @@ footer {
 }
 
 // Overwrite candy theme styles in toggle-switch.scss
-@media only screen {
-  .candy {
-    background-color: #555;
+.candy {
+  background-color: #555;
+}
+
+.candy .slide-button::after {
+  content: "||";
+  color: #fff;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+%clearfix {
+  & {
+    *zoom: 1;
   }
-  
-  .candy .slide-button::after {
-    content: "||";
-    color: #fff;
-    font-weight: normal;
-    line-height: 30px;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
   }
 }
