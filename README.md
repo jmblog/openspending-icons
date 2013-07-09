@@ -24,13 +24,9 @@ $ bower install
 
 ### Adding icons
 
-`app/icons` directory is a place of SVG files. If you want add SVG icons for your OpenSpending satellite site, create a sub directory and put them in.
+A `app/icons` directory is a place of SVG files. If you want add SVG icons for your OpenSpending satellite site, create a sub directory and put them in.
 
-### Preview and build
-
-[Grunt](http://gruntjs.com) is used to preview and build. 
-
-#### Preview
+### Preview the site
 
 ```bash
 $ grunt server
@@ -38,7 +34,7 @@ $ grunt server
 
 A local HTTP server starts and a browser opens [http://localhost:9000]() automatically.
 
-#### Building for a production
+### Building for a production
 
 ```bash
 $ grunt
@@ -48,4 +44,4 @@ A optimized version of the site is built in a `dist` directory.
 
 ### Deploying to your own GitHub page
 
-If you would like to deploy your web application in the `dist` directory to a GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
+If you would like to deploy your web application to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
