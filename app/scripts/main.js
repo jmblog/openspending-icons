@@ -1,7 +1,7 @@
 /*global openSpendingIcons, $*/
 'use strict';
 
-var defailtFillColor = '#000';
+var defaultFillColor = '#0099cc';
 
 window.openSpendingIcons = {
     Models: {},
@@ -31,9 +31,9 @@ window.openSpendingIcons = {
         showInput: true,
         showPalette: true,
         showSelectionPalette: true,
-        palette: ['#830242'],
+        palette: ['#830242', '#99c86f'],
         localStorageKey: 'spectrum.openSpendingIcons',
-        color: defailtFillColor,
+        color: defaultFillColor,
         change: function(color) {
           iconList.each(function(icon) {
             icon.set('fillColor', color.toHexString());
@@ -67,7 +67,7 @@ window.openSpendingIcons = {
 openSpendingIcons.Models.Icon = Backbone.Model.extend({
   defaults: function() {
     return {
-      fillColor: defailtFillColor,
+      fillColor: defaultFillColor,
       active: false
     };
   }
