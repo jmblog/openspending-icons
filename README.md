@@ -1,6 +1,6 @@
 # SVG icon list for Where Does My Money Go?
 
-[Where Does My Money Go? （税金はどこへ行った？）](http://spending.jp)で利用する SVG アイコンを一覧で確認できるサイト、それが [SVG icon list for Where Does My Money Go?](http://jmblog.github.io/spendingjp-icons/) です。
+[SVG icon list for Where Does My Money Go?](http://jmblog.github.io/spendingjp-icons/) は [Where Does My Money Go? （税金はどこへ行った？）](http://spending.jp)で利用する SVG アイコンを一覧で確認できるサイトです。色を変更した状態のプレビューを確認することもできます。
 
 ## 必要なもの
 * [Node.js](http://nodejs.org/)
@@ -19,9 +19,9 @@ $ bower install
 
 ## サイトの更新方法
 
-SVGファイルを追加、変更する場合や、サイトを修正する場合は次のような手順を取ります。
+SVGファイルを追加・変更する場合や、サイトを修正する場合は次のような手順を取ります。
 
-1. `app` ディレクトリ以下のソースを変更する。SVGファイルを追加・変更する場合は `app/icons`。
+1. `app` ディレクトリ以下のソースを変更する。SVGファイルの置き場所は `app/icons`。
 
 2. `$ grunt server` を実行する。ローカルサーバーが起動し、ブラウザが自動的に開くので、変更内容が反映されているか確認する。
 
@@ -31,9 +31,9 @@ SVGファイルを追加、変更する場合や、サイトを修正する場�
 
 5. `$ git push orign master` でプッシュする。
 
-6. `$ git subtree push --prefix dist origin gh-pages` を実行して本番サーバー（Github pages）にデプロイする。
+6. `$ ./deploy.sh` あるいは `$ git subtree push --prefix dist origin gh-pages` を実行して本番サーバー（Github pages）にデプロイする。
 
-`git-subtree` を利用したデブロイ方法については https://github.com/yeoman/yeoman/wiki/Deployment を参照のこと。
+`git-subtree` を利用したデブロイ方法については https://github.com/yeoman/yeoman/wiki/Deployment も参照のこと。
 
 ## ご意見・ご要望は
 
