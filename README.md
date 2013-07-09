@@ -1,40 +1,51 @@
-# SVG icon list for Where Does My Money Go?
+# SVG Icon Gallery for Where Does My Money Go?
 
-[SVG icon list for Where Does My Money Go?](http://jmblog.github.io/spendingjp-icons/) は [Where Does My Money Go? （税金はどこへ行った？）](http://spending.jp)で利用する SVG アイコンを一覧で確認できるサイトです。色を変更した状態のプレビューを確認することもできます。
+[http://jmblog.github.io/openspending-icons/]()
 
-## 必要なもの
+This is a gallery showcasing SVG icons used in [Where Does My Money Go?](http://wheredoesmymoneygo.org/) and its cloned sites (e.g. [http://spending.jp]()). It must be helpful to choice icons when you create an [OpenSpending satellite site](https://github.com/openspending/satellite-template).
+
+## How to build the site?
+
+### Requirements
 * [Node.js](http://nodejs.org/)
-* [Yeoman](yeoman.io)
-* [Bower](bower.io)
-* [Grunt](gruntjs.com)
+* [Yeoman](http://yeoman.io)
+* [Bower](http://bower.io)
+* [Grunt](http://gruntjs.com)
+* [Sass](http://sass-lang.com)
 
-## インストール
+### Installation
 
 ```bash
-$ git clone git@github.com:jmblog/spendingjp-icons.git
-$ cd spendingjp-icons/
+$ git clone git@github.com:jmblog/openspending-icons.git
+$ cd openspending-icons/
 $ npm install
 $ bower install
 ```
 
-## サイトの更新方法
+### Adding icons
 
-SVGファイルを追加・変更する場合や、サイトを修正する場合は次のような手順を取ります。
+`app/icons` directory is a place of SVG files. If you want add SVG icons for your OpenSpending satellite site, create a sub directory and put them in.
 
-1. `app` ディレクトリ以下のソースを変更する。SVGファイルの置き場所は `app/icons`。
+### Preview and build
 
-2. `$ grunt server` を実行する。ローカルサーバーが起動し、ブラウザが自動的に開くので、変更内容が反映されているか確認する。
+[Grunt](http://gruntjs.com) is used to preview and build. 
 
-3. 問題がなければ `$ grunt` を実行して本番用のソースをビルドする。`dist` ディレクトリに本番用のソースが展開される。
+#### Preview
 
-4. `master` ブランチにコミットする。
+```bash
+$ grunt server
+```
 
-5. `$ git push orign master` でプッシュする。
+A local HTTP server starts and a browser opens [http://localhost:9000]() automatically.
 
-6. `$ ./deploy.sh` あるいは `$ git subtree push --prefix dist origin gh-pages` を実行して本番サーバー（Github pages）にデプロイする。
+#### Building for a production
 
-`git-subtree` を利用したデブロイ方法については https://github.com/yeoman/yeoman/wiki/Deployment も参照のこと。
+```bash
+$ grunt
+```
 
-## ご意見・ご要望は
+A optimized version of the site is built in a `dist` directory.
 
-「SVGファイルを追加したい」「こんな機能が欲しい」などリクエストのある方は、[issue](https://github.com/jmblog/spendingjp-icons/issues) でお願いします。もちろん Pull Request も大歓迎です。
+### Deploying to your own GitHub page
+
+If you would like to deploy your web application in the `dist` directory to a GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
