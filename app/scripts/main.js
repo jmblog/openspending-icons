@@ -1,34 +1,28 @@
-/*global spendingjpIcons, $*/
+/*global openSpendingIcons, $*/
 'use strict';
 
 var defailtFillColor = '#000';
 
-window.spendingjpIcons = {
+window.openSpendingIcons = {
     Models: {},
     Collections: {},
     Views: {},
     Data: {},
     init: function () {
-      var iconList = new spendingjpIcons.Collections.IconList(),
-          extraIconList = new spendingjpIcons.Collections.IconList(),
-          iconListView = new spendingjpIcons.Views.IconList({ collection: iconList }),
-          extraIconListView = new spendingjpIcons.Views.IconList({ collection: extraIconList });
+      var iconList = new openSpendingIcons.Collections.IconList(),
+          iconListView = new openSpendingIcons.Views.IconList({ collection: iconList });
 
       // Add models to the collections
-      _.each(spendingjpIcons.Data.Icons, function(path) {
+      _.each(openSpendingIcons.Data.Icons, function(path) {
         var filename = path.replace(/^(.+)\//, ''),
-            basename = filename.replace(/\.svg/, '');
-        if (path.match(/extras/)) {
-          extraIconList.add({ path: path, filename: filename, basename: basename });
-        } else {
-          iconList.add({ path: path, filename: filename, basename: basename });
-        }
+            basename = filename.replace(/\.svg/, ''),
+            subdir = path.match(/^icons\/(.+)\/.+\.svg/);
+        iconList.add({ path: path, filename: filename, basename: basename, subdir: subdir ? subdir[1] : '' });
       });
       
       // Render a page
       setTimeout(function() {
         $('#icon-list').html(iconListView.render().el);
-        $('#extra-icon-list').html(extraIconListView.render().el);
       }, 1500);
       
       // Prepare a color-picker
@@ -38,13 +32,10 @@ window.spendingjpIcons = {
         showPalette: true,
         showSelectionPalette: true,
         palette: ['#830242'],
-        localStorageKey: 'spectrum.spendingjpicons',
+        localStorageKey: 'spectrum.openSpendingIcons',
         color: defailtFillColor,
         change: function(color) {
           iconList.each(function(icon) {
-            icon.set('fillColor', color.toHexString());
-          });
-          extraIconList.each(function(icon) {
             icon.set('fillColor', color.toHexString());
           });
         }
@@ -53,9 +44,6 @@ window.spendingjpIcons = {
       // Prepare a toggle switch
       $('#toggle-switch').on('change', function() {
         iconList.each(function(icon) {
-          icon.set('active', !icon.get('active'));
-        });
-        extraIconList.each(function(icon) {
           icon.set('active', !icon.get('active'));
         });
       });
@@ -76,7 +64,7 @@ window.spendingjpIcons = {
 };
 
 // Models
-spendingjpIcons.Models.Icon = Backbone.Model.extend({
+openSpendingIcons.Models.Icon = Backbone.Model.extend({
   defaults: function() {
     return {
       fillColor: defailtFillColor,
@@ -86,12 +74,12 @@ spendingjpIcons.Models.Icon = Backbone.Model.extend({
 });
 
 // Collections
-spendingjpIcons.Collections.IconList = Backbone.Collection.extend({
-  model: spendingjpIcons.Models.Icon
+openSpendingIcons.Collections.IconList = Backbone.Collection.extend({
+  model: openSpendingIcons.Models.Icon
 });
 
 // Views
-spendingjpIcons.Views.Icon = Backbone.View.extend({
+openSpendingIcons.Views.Icon = Backbone.View.extend({
   className: 'icon-list-item',
   initialize: function() {
     this.$el.attr('original-title', this.model.get('filename'));
@@ -146,14 +134,32 @@ spendingjpIcons.Views.Icon = Backbone.View.extend({
   }
 });
 
-spendingjpIcons.Views.IconList = Backbone.View.extend({
+openSpendingIcons.Views.IconList = Backbone.View.extend({
   render: function(color) {
     var iconViewElements = [];
     this.$el.empty();
-    this.collection.each(function(icon) {
-      var iconView = new spendingjpIcons.Views.Icon({ model: icon });
+    var originals = this.collection.where({ subdir: '' });
+    var groupBySubdir = this.collection.groupBy(function(icon) {
+      return icon.get('subdir');
+    });
+    
+    // Render original icons
+    iconViewElements.push('<h2>Originals</h2>');
+    _.each(originals, function(icon) {
+      var iconView = new openSpendingIcons.Views.Icon({ model: icon });
       iconViewElements.push(iconView.render(color).el);
-    }, this);
+    });
+    
+    // Render extra icons
+    _.each(groupBySubdir, function(icons, subdir) {
+      if (subdir) {
+        iconViewElements.push('<hr />\n<h2>' + subdir + '</h2>');
+        _.each(icons, function(icon) {
+          var iconView = new openSpendingIcons.Views.Icon({ model: icon });
+          iconViewElements.push(iconView.render(color).el);
+        });
+      }
+    });
     this.$el.append(iconViewElements);
     return this;
   }
@@ -163,7 +169,7 @@ spendingjpIcons.Views.IconList = Backbone.View.extend({
 require('app/scripts/data/*');
 
 $(document).ready(function () {
-  spendingjpIcons.init();
+  openSpendingIcons.init();
   
   
 });

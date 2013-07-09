@@ -271,7 +271,7 @@ module.exports = function (grunt) {
     
     grunt.registerTask('createIconData', function() {
         var icons = [],
-            fileHeader = 'window.spendingjpIcons.Data.Icons = [',
+            fileHeader = 'window.openSpendingIcons.Data.Icons = [',
             fileFooter = '];',
             fileContents = '';
         
