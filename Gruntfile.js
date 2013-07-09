@@ -262,6 +262,11 @@ module.exports = function (grunt) {
                 src: '<%= yeoman.app %>/scripts/main.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
+        },
+        uglify: {
+            options: {
+                preserveComments: 'some'
+            }
         }
     });
 
