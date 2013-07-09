@@ -289,7 +289,7 @@ module.exports = function (grunt) {
         fileContents += '  \'' + lastIcon + '\'';
         
         grunt.file.write(grunt.config('yeoman.app') + '/scripts/data/icons.js',
-          fileHeader + '\n'+ fileContents + '\n' + fileFooter
+          fileHeader + '\n'+ fileContents + '\n' + fileFooter + '\n'
         );
     });
 
