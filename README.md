@@ -44,4 +44,4 @@ A optimized version of the site is built in a `dist` directory.
 
 ### Deploying to your own GitHub page
 
-If you would like to deploy your web application to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
+If you would like to deploy the built site to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
