@@ -1,4 +1,4 @@
-# SVG Icon Gallery for Where Does My Money Go?
+# SVG Icon Gallery for "Where Does My Money Go?"
 
 [http://jmblog.github.io/openspending-icons/]()
 
@@ -8,23 +8,21 @@ This is a gallery showcasing SVG icons used in [Where Does My Money Go?](http://
 
 ### Requirements
 * [Node.js](http://nodejs.org/)
-* [Yeoman](http://yeoman.io)
 * [Bower](http://bower.io)
 * [Grunt](http://gruntjs.com)
-* [Sass](http://sass-lang.com)
+* [Sass](http://sass-lang.com) ([Ruby](http://www.ruby-lang.org/) is also required for Sass.)
 
 ### Installation
 
 ```bash
 $ git clone git@github.com:jmblog/openspending-icons.git
 $ cd openspending-icons/
-$ npm install
-$ bower install
+$ npm install && bower install
 ```
 
 ### Adding icons
 
-A `app/icons` directory is a place of SVG files. If you want add SVG icons for your OpenSpending satellite site, create a sub directory and put them in.
+An `app/icons` directory is a place for SVG files. If you want to add SVG icons for your satellite site, create a sub directory like `app/icons/spending.jp`.
 
 ### Preview the site
 
@@ -40,8 +38,8 @@ A local HTTP server starts and a browser opens [http://localhost:9000]() automat
 $ grunt
 ```
 
-A optimized version of the site is built in a `dist` directory.
+A optimized set of files is created in a `dist` directory. Copy them to your Web server.
 
 ### Deploying to your own GitHub page
 
-If you would like to deploy the built site to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
+If you would like to deploy to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
