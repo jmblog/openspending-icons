@@ -10,7 +10,7 @@ This is a gallery showcasing SVG icons used in [Where Does My Money Go?](http://
 * [Node.js](http://nodejs.org/)
 * [Bower](http://bower.io)
 * [Grunt](http://gruntjs.com)
-* [Sass](http://sass-lang.com) ([Ruby](http://www.ruby-lang.org/) is also required for Sass.)
+* [Sass](http://sass-lang.com)
 
 ### Installation
 
@@ -38,7 +38,7 @@ A local HTTP server starts and a browser opens [http://localhost:9000]() automat
 $ grunt
 ```
 
-A optimized set of files is created in a `dist` directory. Copy them to your Web server.
+A optimized set of files is created in a `dist` directory. Copy them to your web server.
 
 ### Deploying to your own GitHub page
 
