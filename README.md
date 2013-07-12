@@ -24,7 +24,7 @@ $ npm install && bower install
 
 An `app/icons` directory is a place for SVG files. If you want to add SVG icons for your satellite site, create a sub directory like `app/icons/spending.jp`.
 
-### Preview the site
+### Preview on a local
 
 ```bash
 $ grunt server
