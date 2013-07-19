@@ -1,6 +1,6 @@
 # SVG Icon Gallery for "Where Does My Money Go?"
 
-[http://jmblog.github.io/openspending-icons/]()
+[http://jmblog.github.io/openspending-icons/](http://jmblog.github.io/openspending-icons/)
 
 This is a gallery showcasing SVG icons used in [Where Does My Money Go?](http://wheredoesmymoneygo.org/) and its cloned sites (e.g. [http://spending.jp]()). It must be helpful to choice icons when you create an [OpenSpending satellite site](https://github.com/openspending/satellite-template).
 
