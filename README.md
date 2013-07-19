@@ -42,4 +42,4 @@ A optimized set of files is created in a `dist` directory. Copy them to your web
 
 ### Deploying to your own GitHub page
 
-If you would like to deploy to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment]().
+If you would like to deploy to your GitHub Page, see [https://github.com/yeoman/yeoman/wiki/Deployment](https://github.com/yeoman/yeoman/wiki/Deployment).
