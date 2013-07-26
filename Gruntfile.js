@@ -186,6 +186,16 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        svgmin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/icons',
+                    src: '{,*/}*.svg',
+                    dest: '<%= yeoman.dist %>/icons'
+                }]
+            }
+        },
         cssmin: {
             dist: {
                 files: {
@@ -339,6 +349,7 @@ module.exports = function (grunt) {
         'useminPrepare',
         'neuter:app',
         'imagemin',
+        'svgmin',
         'htmlmin',
         'concat',
         'cssmin',
