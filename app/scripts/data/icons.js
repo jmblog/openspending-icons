@@ -111,6 +111,7 @@ window.openSpendingIcons.Data.Icons = [
   'icons/spending.jp/child.svg',
   'icons/spending.jp/construction.svg',
   'icons/spending.jp/debt-asahikawa.svg',
+  'icons/spending.jp/japanese-money.svg',
   'icons/spending.jp/machi.svg',
   'icons/spending.jp/payroll.svg',
   'icons/spending.jp/publicaffairs.svg',
