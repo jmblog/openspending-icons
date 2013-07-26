@@ -90,6 +90,7 @@ window.openSpendingIcons.Data.Icons = [
   'icons/secondary-lower.svg',
   'icons/secondary-upper.svg',
   'icons/social-systems.svg',
+  'icons/spending.jp/asahikawa_logo.svg',
   'icons/spending.jp/c_bousai.svg',
   'icons/spending.jp/c_bunnka.svg',
   'icons/spending.jp/c_chiba-city.svg',
